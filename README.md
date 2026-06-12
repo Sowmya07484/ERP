@@ -1,6 +1,6 @@
-# Quantis ERP - Enterprise Resource Planning
+# ERP - Enterprise Resource Planning
 
-Quantis ERP is a modern, high-performance enterprise resource planning solution designed for manufacturing and logistics-heavy businesses. Built with Next.js, Radix UI, and Genkit AI.
+A modern, high-performance enterprise resource planning solution designed for manufacturing and logistics-heavy businesses. Built with Next.js, Radix UI, and Genkit AI.
 
 ## Core Features
 

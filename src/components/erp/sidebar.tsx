@@ -46,7 +46,7 @@ export function ERPSidebar() {
             <div className="bg-primary p-1.5 rounded-lg">
               <Package className="w-5 h-5 text-primary-foreground" />
             </div>
-            <span className="font-headline text-lg font-bold tracking-tight">QUANTIS ERP</span>
+            <span className="font-headline text-lg font-bold tracking-tight">ERP</span>
           </div>
         )}
         <Button 
@@ -83,7 +83,7 @@ export function ERPSidebar() {
 
       <div className="p-4 border-t border-sidebar-border">
         <div className={cn("flex items-center gap-3", collapsed ? "justify-center" : "")}>
-          <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center font-bold text-xs">AR</div>
+          <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center font-bold text-xs text-white">AR</div>
           {!collapsed && (
             <div className="flex flex-col">
               <span className="text-xs font-semibold">Alex Rivera</span>

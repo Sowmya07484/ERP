@@ -2,7 +2,7 @@ import type {Metadata} from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Quantis ERP - Enterprise Resource Planning',
+  title: 'ERP - Enterprise Resource Planning',
   description: 'Modern, enterprise-grade ERP solution for business management.',
 };
 
