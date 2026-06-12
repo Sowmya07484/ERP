@@ -1,4 +1,3 @@
-
 "use client";
 
 import { ERPShell } from "@/components/erp/shell";
@@ -23,9 +22,9 @@ export default function PaymentsPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <KPICard title="Total Received" value="$124,500" icon={CheckCircle2} trend={{ value: 15, isUp: true }} />
-          <KPICard title="Outstanding" value="$42,800" icon={Clock} />
-          <KPICard title="Overdue" value="$12,400" icon={DollarSign} iconClassName="bg-red-50" />
+          <KPICard title="Total Received" value="₹1,24,500" icon={CheckCircle2} trend={{ value: 15, isUp: true }} />
+          <KPICard title="Outstanding" value="₹42,800" icon={Clock} />
+          <KPICard title="Overdue" value="₹12,400" icon={DollarSign} iconClassName="bg-red-50" />
         </div>
 
         <div className="bg-white rounded-xl shadow-sm border p-4">
@@ -46,7 +45,7 @@ export default function PaymentsPage() {
                 <TableRow key={pay.id}>
                   <TableCell className="font-bold">{pay.invoice}</TableCell>
                   <TableCell>{pay.customer}</TableCell>
-                  <TableCell className="font-mono">${pay.amount.toLocaleString()}</TableCell>
+                  <TableCell className="font-mono">₹{pay.amount.toLocaleString()}</TableCell>
                   <TableCell>{pay.date}</TableCell>
                   <TableCell>{pay.method}</TableCell>
                   <TableCell>

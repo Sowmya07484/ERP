@@ -66,12 +66,12 @@ export default function ProductsPage() {
                         <span className="text-muted-foreground">{product.type}</span>
                       </div>
                     </TableCell>
-                    <TableCell className="font-mono text-sm">${product.costPrice}</TableCell>
-                    <TableCell className="font-mono text-sm">${product.sellingPrice}</TableCell>
+                    <TableCell className="font-mono text-sm">₹{product.costPrice}</TableCell>
+                    <TableCell className="font-mono text-sm">₹{product.sellingPrice}</TableCell>
                     <TableCell>
                       <Badge variant="outline" className="font-normal">{product.gstPercent}%</Badge>
                     </TableCell>
-                    <TableCell className="font-bold text-orange-600 font-mono">${finalPrice.toFixed(2)}</TableCell>
+                    <TableCell className="font-bold text-orange-600 font-mono">₹{finalPrice.toFixed(2)}</TableCell>
                     <TableCell>
                       <Badge className={product.status === 'Available' ? 'bg-green-100 text-green-700' : 'bg-slate-100 text-slate-700'}>
                         {product.status}

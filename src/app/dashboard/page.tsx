@@ -53,17 +53,17 @@ export default function DashboardPage() {
           <KPICard title="Total Orders" value="1,284" icon={ShoppingCart} trend={{ value: 12, isUp: true }} />
           <KPICard title="Active Orders" value="482" icon={Activity} />
           <KPICard title="Pending Orders" value="124" icon={Clock} />
-          <KPICard title="Revenue" value="$482,000" icon={DollarSign} trend={{ value: 8.5, isUp: true }} />
-          <KPICard title="Expenses" value="$210,400" icon={TrendingDown} />
-          <KPICard title="Net Profit" value="$271,600" icon={TrendingUp} trend={{ value: 4.2, isUp: true }} />
-          <KPICard title="Stock Value" value="$1.2M" icon={Package} />
+          <KPICard title="Revenue" value="₹4,82,000" icon={DollarSign} trend={{ value: 8.5, isUp: true }} />
+          <KPICard title="Expenses" value="₹2,10,400" icon={TrendingDown} />
+          <KPICard title="Net Profit" value="₹2,71,600" icon={TrendingUp} trend={{ value: 4.2, isUp: true }} />
+          <KPICard title="Stock Value" value="₹1.2Cr" icon={Package} />
           <KPICard title="Reorder Alerts" value="18" icon={AlertCircle} iconClassName="bg-red-50" />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <Card className="lg:col-span-2 shadow-sm border-none">
             <CardHeader>
-              <CardTitle className="text-lg font-headline">Revenue vs Profit</CardTitle>
+              <CardTitle className="text-lg font-headline">Revenue vs Profit (₹)</CardTitle>
             </CardHeader>
             <CardContent className="h-[300px]">
               <ResponsiveContainer width="100%" height="100%">
@@ -77,7 +77,7 @@ export default function DashboardPage() {
                   <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
                   <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{fontSize: 12}} dy={10} />
                   <YAxis axisLine={false} tickLine={false} tick={{fontSize: 12}} />
-                  <Tooltip />
+                  <Tooltip formatter={(value) => [`₹${value}`, 'Amount']} />
                   <Area type="monotone" dataKey="revenue" stroke="#F97316" fillOpacity={1} fill="url(#colorRevenue)" strokeWidth={2} />
                   <Area type="monotone" dataKey="profit" stroke="#EA580C" fillOpacity={0} strokeWidth={2} />
                 </AreaChart>
@@ -128,7 +128,7 @@ export default function DashboardPage() {
           </TabsList>
           <TabsContent value="production" className="mt-0">
              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <KPICard title="Total Production Cost" value="$84,200" icon={Factory} />
+                <KPICard title="Total Production Cost" value="₹84,200" icon={Factory} />
                 <KPICard title="Active Batches" value="12" icon={Activity} />
                 <KPICard title="Completed Units" value="4,200" icon={Package} />
              </div>
@@ -137,7 +137,7 @@ export default function DashboardPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <KPICard title="Open Purchase Orders" value="8" icon={Truck} />
                 <KPICard title="Transit Status" value="3 In Transit" icon={Activity} />
-                <KPICard title="Total Spend" value="$125,000" icon={DollarSign} />
+                <KPICard title="Total Spend" value="₹1,25,000" icon={DollarSign} />
              </div>
           </TabsContent>
         </Tabs>

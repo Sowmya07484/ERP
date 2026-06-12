@@ -143,14 +143,14 @@ export default function ConfigurationPage() {
             <CardContent className="space-y-6">
               <div className="flex flex-col gap-2">
                 <Label>Default Currency</Label>
-                <Select defaultValue="usd">
+                <Select defaultValue="inr">
                   <SelectTrigger>
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="usd">USD - US Dollar</SelectItem>
-                    <SelectItem value="eur">EUR - Euro</SelectItem>
-                    <SelectItem value="gbp">GBP - British Pound</SelectItem>
+                    <SelectItem value="inr">INR - Indian Rupee (₹)</SelectItem>
+                    <SelectItem value="usd">USD - US Dollar ($)</SelectItem>
+                    <SelectItem value="eur">EUR - Euro (€)</SelectItem>
                   </SelectContent>
                 </Select>
               </div>

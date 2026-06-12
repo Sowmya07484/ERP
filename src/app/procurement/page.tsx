@@ -51,7 +51,7 @@ export default function ProcurementPage() {
             <div className="p-3 bg-orange-50 rounded-lg text-orange-600"><FileText size={24} /></div>
             <div>
               <p className="text-sm text-muted-foreground">Total Spend (MTD)</p>
-              <h4 className="text-2xl font-bold font-headline">$42,850</h4>
+              <h4 className="text-2xl font-bold font-headline">₹42,850</h4>
             </div>
           </div>
         </div>
@@ -84,7 +84,7 @@ export default function ProcurementPage() {
                   <TableCell className="font-medium">{po.supplier}</TableCell>
                   <TableCell>{po.material}</TableCell>
                   <TableCell>{po.quantity.toLocaleString()} units</TableCell>
-                  <TableCell className="font-bold font-mono text-orange-600">${po.totalCost.toLocaleString()}</TableCell>
+                  <TableCell className="font-bold font-mono text-orange-600">₹{po.totalCost.toLocaleString()}</TableCell>
                   <TableCell className="text-xs text-muted-foreground">{po.date}</TableCell>
                   <TableCell>
                     <Badge className={getStatusColor(po.status)}>

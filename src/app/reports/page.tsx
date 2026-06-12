@@ -148,8 +148,8 @@ export default function ReportsPage() {
                         <TableCell>{entry.date}</TableCell>
                         <TableCell className="font-medium">{entry.account}</TableCell>
                         <TableCell className="text-xs text-muted-foreground">{entry.reference}</TableCell>
-                        <TableCell className="text-right font-mono">{entry.debit ? `$${entry.debit}` : '-'}</TableCell>
-                        <TableCell className="text-right font-mono">{entry.credit ? `$${entry.credit}` : '-'}</TableCell>
+                        <TableCell className="text-right font-mono">{entry.debit ? `₹${entry.debit.toLocaleString()}` : '-'}</TableCell>
+                        <TableCell className="text-right font-mono">{entry.credit ? `₹${entry.credit.toLocaleString()}` : '-'}</TableCell>
                       </TableRow>
                     ))}
                   </TableBody>
@@ -165,15 +165,15 @@ export default function ReportsPage() {
                  <CardContent className="space-y-4">
                     <div className="flex justify-between items-center py-2 border-b">
                        <span className="text-sm">Gross Sales</span>
-                       <span className="font-mono font-bold text-green-600">+$245,000</span>
+                       <span className="font-mono font-bold text-green-600">+₹2,45,000</span>
                     </div>
                     <div className="flex justify-between items-center py-2 border-b">
                        <span className="text-sm">COGS (Cost of Goods Sold)</span>
-                       <span className="font-mono font-bold text-red-600">-$120,400</span>
+                       <span className="font-mono font-bold text-red-600">-₹1,20,400</span>
                     </div>
                     <div className="flex justify-between items-center py-2 border-b bg-slate-50 px-2 rounded">
                        <span className="text-sm font-bold">Gross Profit</span>
-                       <span className="font-mono font-bold">$124,600</span>
+                       <span className="font-mono font-bold">₹1,24,600</span>
                     </div>
                  </CardContent>
                </Card>

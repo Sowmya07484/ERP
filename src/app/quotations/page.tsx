@@ -89,7 +89,7 @@ export default function QuotationsPage() {
                   <TableCell className="font-bold text-xs">{quote.quoteNumber}</TableCell>
                   <TableCell className="font-medium">{quote.customer}</TableCell>
                   <TableCell className="text-sm">{quote.product}</TableCell>
-                  <TableCell className="font-bold font-mono text-orange-600">${quote.amount.toLocaleString()}</TableCell>
+                  <TableCell className="font-bold font-mono text-orange-600">₹{quote.amount.toLocaleString()}</TableCell>
                   <TableCell className="text-xs text-muted-foreground">{quote.validUntil}</TableCell>
                   <TableCell>
                     <Badge className={getStatusColor(quote.status)}>

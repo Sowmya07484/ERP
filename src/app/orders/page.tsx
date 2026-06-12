@@ -59,7 +59,7 @@ export default function OrdersPage() {
                   <TableCell className="font-medium">{order.customerName}</TableCell>
                   <TableCell className="text-sm">{order.productName}</TableCell>
                   <TableCell>{order.quantity} Units</TableCell>
-                  <TableCell className="font-bold text-orange-600 font-mono">${order.totalAmount.toLocaleString()}</TableCell>
+                  <TableCell className="font-bold text-orange-600 font-mono">₹{order.totalAmount.toLocaleString()}</TableCell>
                   <TableCell className="text-xs text-muted-foreground">{order.orderDate}</TableCell>
                   <TableCell>
                     <Badge className={getStatusColor(order.status)}>

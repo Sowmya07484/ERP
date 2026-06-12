@@ -29,7 +29,7 @@ export default function RawMaterialsPage() {
               <div className="p-3 bg-blue-50 rounded-lg"><Boxes className="text-blue-600" /></div>
               <div>
                 <p className="text-sm text-muted-foreground">Total Stock Value</p>
-                <h4 className="text-2xl font-bold font-headline">$142,500</h4>
+                <h4 className="text-2xl font-bold font-headline">₹1,42,500</h4>
               </div>
             </div>
           </div>
@@ -83,8 +83,8 @@ export default function RawMaterialsPage() {
                         <Progress value={stockPercentage} className={isLow ? "bg-red-100" : "bg-slate-100"} />
                       </div>
                     </TableCell>
-                    <TableCell className="font-mono">${material.purchaseCost}/{material.unit}</TableCell>
-                    <TableCell className="font-mono font-bold">${stockValue.toLocaleString()}</TableCell>
+                    <TableCell className="font-mono">₹{material.purchaseCost}/{material.unit}</TableCell>
+                    <TableCell className="font-mono font-bold">₹{stockValue.toLocaleString()}</TableCell>
                     <TableCell className="text-sm">{material.supplier}</TableCell>
                     <TableCell>
                       <Button variant="ghost" size="sm" className="text-primary hover:text-primary hover:bg-orange-50">Procure</Button>
