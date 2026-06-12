@@ -196,3 +196,50 @@ export const mockLedger: LedgerEntry[] = [
   { id: 'l3', date: '2024-03-02', account: 'Inventory', debit: 2000, reference: 'PO-005' },
   { id: 'l4', date: '2024-03-02', account: 'Cash', credit: 2000, reference: 'PO-005' }
 ];
+
+export interface PurchaseOrder {
+  id: string;
+  poNumber: string;
+  supplier: string;
+  material: string;
+  quantity: number;
+  totalCost: number;
+  status: 'Pending' | 'Ordered' | 'Received' | 'Cancelled';
+  date: string;
+}
+
+export const mockPurchaseOrders: PurchaseOrder[] = [
+  { id: 'po1', poNumber: 'PO-2024-001', supplier: 'MetalCorp Ltd', material: 'Grade A Steel', quantity: 2000, totalCost: 130000, status: 'Received', date: '2024-02-15' },
+  { id: 'po2', poNumber: 'PO-2024-002', supplier: 'ChemSolutions Inc', material: 'Industrial Lubricant', quantity: 100, totalCost: 1500, status: 'Ordered', date: '2024-03-01' },
+];
+
+export interface Quotation {
+  id: string;
+  quoteNumber: string;
+  customer: string;
+  product: string;
+  amount: number;
+  validUntil: string;
+  status: 'Draft' | 'Sent' | 'Accepted' | 'Expired';
+}
+
+export const mockQuotations: Quotation[] = [
+  { id: 'q1', quoteNumber: 'QT-2024-101', customer: 'Industrial Systems Corp', product: 'Valve X1 x 5', amount: 2250, validUntil: '2024-04-15', status: 'Sent' },
+  { id: 'q2', quoteNumber: 'QT-2024-102', customer: 'Global Power', product: 'Valve X1 x 20', amount: 9000, validUntil: '2024-04-20', status: 'Accepted' },
+];
+
+export interface Installation {
+  id: string;
+  orderNumber: string;
+  customer: string;
+  product: string;
+  location: string;
+  status: 'Scheduled' | 'In Progress' | 'Completed' | 'Delayed';
+  technician: string;
+  date: string;
+}
+
+export const mockInstallations: Installation[] = [
+  { id: 'i1', orderNumber: 'ORD-2024-001', customer: 'Global Manufacturing Inc.', product: 'Industrial Valve X1', location: 'Site A', status: 'Completed', technician: 'Robert Fox', date: '2024-03-10' },
+  { id: 'i2', orderNumber: 'ORD-2024-003', customer: 'Tech Solutions', product: 'Industrial Valve X1', location: 'Branch B', status: 'Scheduled', technician: 'Sarah Connor', date: '2024-03-25' },
+];
